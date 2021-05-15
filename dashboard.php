@@ -59,8 +59,12 @@
         </div>
     </nav>
     <h1>Welcome, <?php echo$userDetails->username; ?></h1>
-    <?php print_r($_SESSION['id']); ?>
+    <?php 
+        // echo($_SESSION['id']); 
+    ?>
     <br>
-    <?php print_r($_COOKIE['rememberme']); ?>
+    <?php 
+        // echo($_COOKIE['rememberme']); 
+    ?>
 </body>
 </html>
