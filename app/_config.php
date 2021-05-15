@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    define("BASE_URL", "http://localhost/websiteB/dataLogin/");
+    define("BASE_URL", "http://localhost/websiteB/dataLogin/Quiz2_PWEB-B/");
 
     // DB
     define("DB_HOST", "localhost");

@@ -59,6 +59,7 @@
         </div>
     </nav>
     <h1>Welcome, <?php echo$userDetails->username; ?></h1>
+    <h1>Have A Nice Day :))</h1>
     <?php 
         // echo($_SESSION['id']); 
     ?>

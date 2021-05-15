@@ -59,16 +59,16 @@
      if (!empty($_POST['loginSubmit'])) {
         $usernameLog=$_POST['usernameLog'];
         $password=$_POST['password'];
+
         if(strlen(trim($usernameLog))>1 && strlen(trim($password))>1 ) {
-
-            if( isset($_POST['rememberme']) ){
-                // Set cookie variables
-                $value = encryptCookie($usernameLog, $password);
-
-                setcookie ("rememberme",$value,time()+ (3600)); 
-            }
             $id=$user->userLogin($usernameLog,$password);
             if($id) {
+                if( isset($_POST['rememberme']) ){
+                    // Set cookie variables
+                    $value = encryptCookie($usernameLog, $password);
+
+                    setcookie ("rememberme",$value,time()+ (3600)); 
+                }
                 $url=BASE_URL.'dashboard.php';
                 header("Location: $url"); // Page redirecting to dashboard.php    
             } else {
@@ -110,7 +110,7 @@
             <div class="container-fluid">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="register.php">REGISTER</a>
-                    <a class="navbar-brand" href="http://localhost/websiteB/dataLogin/">LOGIN</a>
+                    <a class="navbar-brand" href="http://localhost/websiteB/dataLogin/Quiz2_PWEB-B/">LOGIN</a>
                 </div>
             </div>
         </nav>
